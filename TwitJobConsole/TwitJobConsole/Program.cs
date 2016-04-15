@@ -15,7 +15,8 @@ namespace TwitJobConsole
             var stream = Stream.CreateUserStream();
             stream.TweetCreatedByAnyone += (sender, args) =>
             {
-                Console.WriteLine("Here's the thing" + args.Tweet);
+                //Console.WriteLine("Here's the thing" + args.Tweet);
+                //Tweet.PublishTweetInReplyTo("@" + args.Tweet.CreatedBy.ScreenName + " Go away", args.Tweet);
             };
 
             stream.StartStream();
